@@ -1,7 +1,8 @@
 def copy_file(command: str) -> None:
-    if len(command.split(" ")) != 3:
+    parts = command.split(" ")
+    if len(parts) != 3:
         return
-    file_command, old_file_name, new_file_name = command.split(" ")
+    file_command, old_file_name, new_file_name = parts
 
     if old_file_name == new_file_name or file_command != "cp":
         return
